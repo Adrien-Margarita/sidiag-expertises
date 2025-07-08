@@ -12,7 +12,7 @@ export default function Footer() {
           <ul className="space-y-1">
             <li>SIRET : 123 456 789 00012</li>
             <li>Responsabilité civile professionnelle assurée</li>
-            <li>Certifié par un organisme agréé (ex : I.CERT, BUREAU VERITAS)</li>
+            <li>Certifié par un organisme agréé</li>
           </ul>
         </div>
 
@@ -20,7 +20,7 @@ export default function Footer() {
           <h4 className="font-semibold text-gray-800 mb-2">Infos & conformité</h4>
           <ul className="space-y-1">
             <li>Conformité RGPD</li>
-            <li>Hébergement : Vercel / Netlify</li>
+            <li>Hébergement : Vercel</li>
             <li>&copy; {new Date().getFullYear()} Sidiag Expertises</li>
           </ul>
         </div>
