@@ -1,3 +1,5 @@
+import { EnvelopeIcon } from "@heroicons/react/24/outline";
+import { PhoneIcon } from "lucide-react";
 import QuoteForm from "../components/QuoteForm";
 
 export default function HomePage() {
@@ -121,14 +123,14 @@ export default function HomePage() {
 
     {/* Image desktop avec parallax */}
     <div
-        className="hidden md:block w-full h-[50vh] bg-fixed bg-center bg-cover"
+        className="hidden md:block w-full h-[35vh] bg-fixed bg-center bg-cover"
         style={{ backgroundImage: "url('/toulon.webp')" }}>
     </div>
 </section>
 
 
     {/* Call to action */}
-    <section className="bg-sidiag-dark text-white text-center px-6 py-20">
+    <section className="bg-sidiag-medium text-white text-center px-6 py-20">
         <h2 className="text-2xl md:text-3xl font-bold mb-4">
             Vous avez un bien à faire diagnostiquer ?
         </h2>
@@ -142,6 +144,34 @@ export default function HomePage() {
             Demander un devis gratuit
         </a>
     </section>
+
+    {/* Contact */}
+    <section className="bg-sidiag-dark text-white px-6 py-20">
+        <div className="max-w-3xl mx-auto text-center">
+          <h1 className="text-2xl md:text-4xl font-bold mb-6">Nous contacter</h1>
+          <p className="mb-8 text-sm md:text-base">
+            Vous pouvez nous joindre facilement par téléphone ou par email.
+          </p>
+          <div className="flex flex-col items-center space-y-4">
+            {/* Numéro de téléphone cliquable */}
+            <a 
+              href="tel:+33668852578" 
+              className="inline-flex items-center text-teal-300 hover:text-teal-400"
+            >
+              <PhoneIcon className="w-6 h-6 mr-2" />
+              <span>+33 6 68 85 25 78</span>
+            </a>
+            {/* Adresse email cliquable */}
+            <a 
+              href="mailto:sidiag.expertises@gmail.com" 
+              className="inline-flex items-center text-teal-300 hover:text-teal-400"
+            >
+              <EnvelopeIcon className="w-6 h-6 mr-2" />
+              <span>sidiag.expertises@gmail.com</span>
+            </a>
+          </div>
+        </div>
+      </section>
 </main>
   );
 }
