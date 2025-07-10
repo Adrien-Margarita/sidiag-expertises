@@ -1,10 +1,11 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const navLinks = [
-    { name: "Accueil", href: "/" },
+    { name: "Accueil", href: "/#accueil" },
     { name: "Services", href: "/#services" },
     { name: "Qui sommes-nous ?", href: "/#about" },
     { name: "Contact", href: "/contact" },
@@ -15,29 +16,23 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
         
         {/* Logo */}
-        <a href="/">
-          <div className="flex items-center gap-3">
+        <Link to ="/#accueil" className="flex items-center gap-3">
             <img src="/logo.webp" alt="Sidiag Logo" className="w-[100px] h-[100px] object-contain" />
             <span className="text-lg font-semibold text-sidiag-dark">Sidiag Expertises</span>
-          </div>     
-        </a>
+        </Link>
         {/* Desktop Nav */}
         <nav className="hidden md:flex gap-6 items-center">
           {navLinks.map((link) => (
-            <a
+            <Link
               key={link.name}
-              href={link.href}
-              className="text-sm text-gray-700 hover:text-sidiag-medium transition"
-            >
-              {link.name}
-            </a>
+              to={link.href}
+              className="text-sm text-gray-700 hover:text-sidiag-medium transition">
+                {link.name}
+            </Link>
           ))}
-          <a
-            href="#devis"
-            className="bg-sidiag-dark text-white px-4 py-2 rounded-lg text-sm hover:bg-sidiag-medium transition"
-          >
-            Demander un devis
-          </a>
+          <Link to={"/#devis"} className="bg-sidiag-dark text-white px-4 py-2 rounded-lg text-sm hover:bg-sidiag-medium transition">
+            Demander un devis gratuit
+          </Link>
         </nav>
 
         {/* Mobile Menu Button */}
@@ -55,22 +50,23 @@ export default function Header() {
         <div className="md:hidden bg-white shadow-md border-t border-gray-100">
           <div className="flex flex-col p-4 gap-3">
             {navLinks.map((link) => (
-              <a
+              <Link
+                to={link.href}
+                className="text-sm text-gray-700 hover:text-sidiag-medium transition"
                 key={link.name}
-                href={link.href}
-                className="text-sm text-sidiag-dark hover:text-sidiag-medium"
                 onClick={() => setMenuOpen(false)}
               >
                 {link.name}
-              </a>
+              </Link>
             ))}
-            <a
-              href="#devis"
+            <Link
+              to="/#devis"
               className="bg-sidiag-dark text-white text-center px-4 py-2 rounded-lg text-sm hover:bg-cyan-800 transition"
               onClick={() => setMenuOpen(false)}
             >
+            
               Demander un devis
-            </a>
+            </Link>
           </div>
         </div>
       )}
