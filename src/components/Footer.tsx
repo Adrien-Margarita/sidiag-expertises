@@ -11,9 +11,6 @@ export default function Footer() {
         <div>
           <h4 className="font-semibold text-lg mb-2">Mentions légales</h4>
           <ul className="space-y-1">
-            <li>SIRET : 945 059 368 00015</li>
-            <li>Assurance RC Pro : MMA n°123456789</li>
-            <li>Certifié par I.CERT</li>
             <li>
               <a
                 href="/mentions-legales"
@@ -22,7 +19,11 @@ export default function Footer() {
                 Voir les mentions légales
               </a>
             </li>
+            <li>SIRET : 945 059 368 00015</li>
+            <li>Assurance RC Pro : Klarity CDIAGK002075</li>
+            <img src="/certification.webp" alt="certification LCP" className="w-[40%] bg-white p-1 rounded-md"/>
           </ul>
+          
         </div>
 
         <div>

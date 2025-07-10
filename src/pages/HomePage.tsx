@@ -7,11 +7,11 @@ export default function HomePage() {
   return (
     <main className="mt-16">
       {/* Hero */}
-      <section className="relative" id="accueil" role="region" aria-labelledby="hero-title">
+      <section className="relative z-0" id="accueil" role="region" aria-labelledby="hero-title">
         <img
           src="/banner.webp"
           alt="Rade de Toulon et bord de mer dans le Var"
-          className="w-full md:h-[50vh] xl:h-[70vh] md:max-h-[800px] object-cover object-bottom 2xl:h-[85vh] 2xl:max-h-[1200px] 4xl:h-[96vh] 4xl:max-h-[1600px]"
+          className="w-full md:h-[50vh] xl:h-[70vh] md:max-h-[800px] object-cover object-bottom 2xl:h-[85vh] 2xl:max-h-[1200px] 4xl:h-[96vh] 4xl:max-h-[1600px] pointer-events-none"
         />
 
 
@@ -151,7 +151,7 @@ export default function HomePage() {
       </section>
 
       {/* Contact */}
-      <section role="region" aria-labelledby="contact-title" className="bg-sidiag-dark text-white px-6 py-20">
+      <section id="contact" role="region" aria-labelledby="contact-title" className="bg-sidiag-dark text-white px-6 py-20">
         <div className="max-w-3xl mx-auto text-center">
           <h2 id="contact-title" className="text-2xl md:text-4xl font-bold mb-6">
             Nous contacter

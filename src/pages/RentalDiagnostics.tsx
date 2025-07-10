@@ -90,7 +90,7 @@ export default function RentalDiagnostics() {
         className="bg-sidiag-dark text-white py-12"
         aria-labelledby="why-choose-us"
       >
-        <div className="px-6 max-w-4xl mx-auto text-center space-y-4">
+        <div className="px-3 md:px-6 max-w-4xl mx-auto text-center space-y-4">
           <h2 id="why-choose-us" className="text-2xl font-bold">
             Pourquoi choisir Sidiag Expertises pour vos diagnostics location ?
           </h2>
