@@ -10,7 +10,7 @@ export default function Header() {
   const navLinks = [
     { name: "Accueil", href: "/#accueil" },
     { name: "Qui sommes-nous ?", href: "/#about" },
-    { name: "Contact", href: "/#contact" },
+    { name: "Contact", href: "/contact" },
   ];
 
   const venteDiagnostics = diagnostics.filter((d) =>
