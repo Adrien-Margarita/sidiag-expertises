@@ -3,6 +3,7 @@ import { Navigation, Autoplay } from "swiper/modules";
 import "swiper/swiper-bundle.css";
 import { ArrowRightIcon } from "@heroicons/react/24/outline";
 import { diagnostics } from "../data/diagnosticsData";
+import { Link } from "react-router-dom";
 
 export default function DiagnosticsCarousel() {
   return (
@@ -31,16 +32,20 @@ export default function DiagnosticsCarousel() {
           {diagnostics.map((diag) => (
             <SwiperSlide key={diag.title} className="pb-4">
               <div className="bg-white rounded-xl shadow-md hover:shadow-lg transition p-6 flex flex-col justify-between border border-gray-100 min-h-[260px]">
-              <img src={diag.icon} alt="" className="w-12 h-12 mx-auto mb-4" />
-              <h3 className="text-lg font-semibold text-sidiag-dark mb-2">{diag.title}</h3>
-              <p className="text-sm text-gray-600 mb-4 flex-grow">{diag.description}</p>
-              <a
-                href={`diagnostic/${diag.slug}`}
-                className="inline-flex items-center justify-center text-sidiag-mediumLight hover:text-sidiag-dark font-medium text-sm"
-              >
-                En savoir plus <ArrowRightIcon className="w-4 h-4 ml-1" />
-              </a>
-            </div>
+                <img src={diag.icon} alt="" className="w-12 h-12 mx-auto mb-4" />
+                <h3 className="text-lg font-semibold text-sidiag-dark mb-2">
+                  {diag.title}
+                </h3>
+                <p className="text-sm text-gray-600 mb-4 flex-grow">
+                  {diag.description}
+                </p>
+                <Link
+                  to={`/diagnostic/${diag.slug}`}
+                  className="inline-flex items-center justify-center text-sidiag-mediumLight hover:text-sidiag-dark font-medium text-sm"
+                >
+                  En savoir plus <ArrowRightIcon className="w-4 h-4 ml-1" />
+                </Link>
+              </div>
             </SwiperSlide>
           ))}
         </Swiper>
