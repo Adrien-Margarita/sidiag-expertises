@@ -36,7 +36,7 @@ export default function QuoteForm() {
       </h2>
 
       <form
-        action="https://formsubmit.co/50c526c681ddbcdca4f503a3881e55c8"
+        action="https://formsubmit.co/c893066a5e53353fc0c8c0e5b9528bbb"
         method="POST"
         className="space-y-6 bg-white/90 p-6 rounded-2xl shadow-lg transition-all duration-300 hover:shadow-2xl backdrop-blur"
       >

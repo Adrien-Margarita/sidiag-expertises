@@ -5,7 +5,7 @@ export interface Diagnostic {
   icon: string;
   secteur: string;
   immeubles: string;
-  transactions: string[]; // <--- corrigé
+  transactions: string[];
   usages: string;
   parties: string;
   validite: string;
@@ -28,10 +28,14 @@ export const diagnostics: Diagnostic[] = [
     parties: "Parties privatives.",
     validite: "10 ans (sauf si travaux importants).",
     sanctions: "Possibilité d’annulation du bail ou de la vente, amendes pour fausse déclaration.",
-    pourquoi: `Le Diagnostic de Performance Énergétique (DPE) est essentiel pour informer les acquéreurs ou locataires sur la performance énergétique d’un bien immobilier et ses émissions de gaz à effet de serre. Il permet de valoriser un logement économe et de sensibiliser aux économies d’énergie. Ce diagnostic est également un outil clé pour la transition énergétique et la lutte contre le changement climatique.`,
-    quand: `Le DPE est obligatoire en cas de vente ou de location d’un logement en France, dès la mise en annonce. Il doit être présenté lors des visites et annexé au compromis de vente ou au bail de location.`,
-    comment: `Un diagnostiqueur certifié mesure les caractéristiques du bâti, de l’isolation, du chauffage et calcule une étiquette énergie (A à G). Il fournit également des recommandations pour améliorer la performance énergétique.`
+    pourquoi: `
+Le Diagnostic de Performance Énergétique (DPE) est un document clé pour informer sur la consommation théorique d’énergie et les émissions de gaz à effet de serre d’un logement. Il devient un atout commercial majeur : un bien performant se vend ou se loue plus facilement et à un meilleur prix, tandis qu’un bien mal classé attire moins de candidats et peut perdre de la valeur. Le DPE participe à la lutte contre le réchauffement climatique en sensibilisant aux économies d’énergie et en incitant à la rénovation énergétique.`,
+    quand: `
+Le DPE est obligatoire dès la mise en annonce d’une vente ou d’une location, avant toute visite et à annexer à la promesse de vente ou au bail. Il est également requis lors de travaux impactant la performance énergétique pour refléter la réalité après rénovation.`,
+    comment: `
+Le diagnostiqueur relève les caractéristiques thermiques du bâti et des équipements, puis les saisit dans un logiciel réglementé pour calculer l’étiquette énergie et climat. Il remet un rapport précis avec des recommandations pour améliorer la performance.`  
   },
+
   {
     slug: "amiante",
     title: "Diagnostic Amiante",
@@ -44,10 +48,14 @@ export const diagnostics: Diagnostic[] = [
     parties: "Privatives et communes.",
     validite: "Illimitée en cas d’absence d’amiante, 3 ans si présence avec obligation de contrôle.",
     sanctions: "Annulation de la vente ou engagement de responsabilité du vendeur.",
-    pourquoi: `Le Diagnostic Amiante est indispensable pour protéger la santé des occupants et des travailleurs. L’amiante, longtemps utilisé pour ses qualités isolantes, est hautement cancérigène. Ce diagnostic sécurise la transaction et prévient les risques liés à l’inhalation de fibres d’amiante.`,
-    quand: `Ce diagnostic est obligatoire avant la mise en vente d’un bien dont le permis de construire a été délivré avant le 1er juillet 1997.`,
-    comment: `Le diagnostiqueur inspecte visuellement les matériaux potentiellement amiantés et peut prélever des échantillons analysés en laboratoire.`
+    pourquoi: `
+L’amiante est un matériau cancérigène interdit depuis 1997 mais encore présent dans de nombreux bâtiments anciens. Ce diagnostic permet d’évaluer les risques pour la santé des occupants et des travailleurs lors de travaux ou démolition. C’est un outil indispensable pour assurer la sécurité et la transparence lors d’une transaction.`,
+    quand: `
+Obligatoire avant la mise en vente d’un bien construit avant juillet 1997. Il est conseillé d’en disposer même en dehors d’une transaction si des travaux sont envisagés.`,
+    comment: `
+Le diagnostiqueur inspecte visuellement les matériaux et effectue des prélèvements analysés en laboratoire pour détecter la présence d’amiante. Un rapport précise les zones à risque et les éventuelles obligations de surveillance ou de retrait.`  
   },
+
   {
     slug: "plomb",
     title: "Diagnostic Plomb (CREP)",
@@ -60,10 +68,14 @@ export const diagnostics: Diagnostic[] = [
     parties: "Parties privatives et communes.",
     validite: "1 an pour la vente, 6 ans pour la location.",
     sanctions: "Responsabilité du bailleur ou vendeur engagée en cas d’intoxication au plomb (saturnisme).",
-    pourquoi: `Le diagnostic plomb protège contre les risques d’intoxication au plomb, notamment chez les enfants. Présent dans les anciennes peintures, le plomb peut provoquer des troubles graves.`,
-    quand: `Il est obligatoire avant toute vente ou location d’un bien construit avant 1949.`,
-    comment: `Le diagnostiqueur utilise un appareil à fluorescence X pour mesurer la concentration en plomb dans les revêtements.`
+    pourquoi: `
+Le diagnostic plomb est essentiel pour prévenir le saturnisme chez les enfants et les femmes enceintes. Très présent dans les peintures anciennes, le plomb peut être ingéré ou inhalé sous forme de poussières et provoquer de graves troubles de santé.`,
+    quand: `
+Obligatoire avant la vente ou la location de tout bien construit avant 1949.`,
+    comment: `
+Le diagnostiqueur utilise un appareil à fluorescence X pour mesurer la teneur en plomb des revêtements et identifie les zones dangereuses nécessitant une rénovation.`  
   },
+
   {
     slug: "gaz",
     title: "Diagnostic Gaz",
@@ -76,10 +88,14 @@ export const diagnostics: Diagnostic[] = [
     parties: "Parties privatives.",
     validite: "3 ans pour la vente, 6 ans pour la location.",
     sanctions: "Engagement de la responsabilité du vendeur ou bailleur en cas d’accident.",
-    pourquoi: `Le diagnostic gaz vise à protéger les occupants contre les risques d’explosion, d’incendie ou d’intoxication au monoxyde de carbone.`,
-    quand: `Il est obligatoire pour les biens équipés d’une installation de gaz de plus de 15 ans.`,
-    comment: `Le diagnostiqueur contrôle la tuyauterie, la ventilation et les appareils alimentés en gaz.`
+    pourquoi: `
+Ce diagnostic protège contre les risques d’explosion, d’incendie et d’intoxication au monoxyde de carbone dus à des installations vétustes ou défectueuses. Il assure la sécurité des occupants.`,
+    quand: `
+Obligatoire pour toute transaction (vente ou location) si l’installation a plus de 15 ans.`,
+    comment: `
+Le diagnostiqueur contrôle visuellement et teste les appareils, la tuyauterie, la ventilation et les détecteurs pour vérifier la conformité aux normes de sécurité.`  
   },
+
   {
     slug: "electricite",
     title: "Diagnostic Électricité",
@@ -92,10 +108,14 @@ export const diagnostics: Diagnostic[] = [
     parties: "Parties privatives.",
     validite: "3 ans pour la vente, 6 ans pour la location.",
     sanctions: "Engagement de la responsabilité du vendeur ou bailleur en cas d’accident.",
-    pourquoi: `Le diagnostic électricité permet de prévenir les risques d’électrocution, d’incendie et d’électrisation.`,
-    quand: `Il est obligatoire pour tout bien dont l’installation électrique a plus de 15 ans.`,
-    comment: `Le diagnostiqueur inspecte le tableau électrique, les prises et vérifie la mise à la terre.`
+    pourquoi: `
+Le diagnostic électricité prévient les accidents domestiques comme les électrocutions, incendies ou courts‑circuits causés par des installations anciennes ou non conformes.`,
+    quand: `
+Obligatoire pour toute transaction si l’installation a plus de 15 ans.`,
+    comment: `
+Le diagnostiqueur vérifie la mise à la terre, le disjoncteur, les fusibles, la présence de différentiels et l’état général du tableau et des prises.`  
   },
+
   {
     slug: "termites",
     title: "Diagnostic Termites",
@@ -108,10 +128,14 @@ export const diagnostics: Diagnostic[] = [
     parties: "Parties privatives et communes.",
     validite: "6 mois.",
     sanctions: "Responsabilité du vendeur engagée pour vice caché.",
-    pourquoi: `Le diagnostic termites prévient les dégradations structurelles causées par ces insectes xylophages.`,
-    quand: `Obligatoire avant la vente dans les zones à risque définies par arrêté préfectoral.`,
-    comment: `Le diagnostiqueur inspecte visuellement les zones boisées et prend des sondages.`
+    pourquoi: `
+Les termites fragilisent la structure en bois des bâtiments. Ce diagnostic protège l’acheteur d’un vice caché et permet d’agir rapidement pour éradiquer l’infestation.`,
+    quand: `
+Obligatoire pour toute vente dans une zone à risque définie par arrêté préfectoral.`,
+    comment: `
+Le diagnostiqueur inspecte visuellement et sonde les bois pour détecter les galeries et traces d’infestation.`  
   },
+
   {
     slug: "erp",
     title: "État des Risques et Pollutions (ERP)",
@@ -124,10 +148,14 @@ export const diagnostics: Diagnostic[] = [
     parties: "Parties privatives.",
     validite: "6 mois.",
     sanctions: "Annulation possible de la transaction ou réduction du prix.",
-    pourquoi: `L’ERP informe les acquéreurs et locataires des risques auxquels le bien est exposé (inondations, séismes, pollution industrielle, radon…).`,
-    quand: `Il est obligatoire dès la mise en vente ou en location, dans les zones à risques définies.`,
-    comment: `Le diagnostiqueur consulte les arrêtés préfectoraux et établit un état précis des risques applicables au bien.`
+    pourquoi: `
+L’ERP informe sur les risques naturels (inondations, séismes), technologiques (usines, barrages), miniers et pollutions des sols. Il protège le futur occupant en l’avertissant des contraintes environnementales locales.`,
+    quand: `
+Obligatoire dès la mise en vente ou en location dans les zones couvertes par un plan de prévention.`,
+    comment: `
+Le diagnostiqueur consulte les arrêtés préfectoraux et établit une cartographie des risques affectant le bien.`  
   },
+
   {
     slug: "carrez",
     title: "Mesurage Loi Carrez",
@@ -140,8 +168,11 @@ export const diagnostics: Diagnostic[] = [
     parties: "Parties privatives uniquement.",
     validite: "Illimitée tant qu’aucune modification n’a été apportée au bien.",
     sanctions: "Réduction du prix de vente si la surface réelle est inférieure de plus de 5 % à celle annoncée.",
-    pourquoi: `Le mesurage Loi Carrez sécurise la transaction en garantissant à l’acheteur la surface privative exacte du bien vendu en copropriété. Une erreur peut coûter cher au vendeur si elle dépasse les 5 %.`,
-    quand: `Le mesurage Loi Carrez est obligatoire pour toute vente d’un lot en copropriété, quelle que soit la destination du bien.`,
-    comment: `Le diagnostiqueur mesure avec précision la surface privative en excluant les surfaces non comptabilisables (caves, balcons, espaces inférieurs à 1,80 m…). Un certificat est remis et annexé à la promesse de vente.`
-  }
+    pourquoi: `
+Le mesurage Loi Carrez garantit la transparence sur la surface réelle du bien en copropriété. Un métrage erroné peut entraîner une réclamation de l’acquéreur et une baisse de prix.`,
+    quand: `
+Obligatoire avant toute mise en vente d’un bien en copropriété.`,
+    comment: `
+Le diagnostiqueur mesure la surface habitable en déduisant caves, balcons et espaces inférieurs à 1,80 mètre.`  
+  },
 ];

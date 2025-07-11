@@ -11,7 +11,7 @@ export default function HomePage() {
         <img
           src="/banner.webp"
           alt="Rade de Toulon et bord de mer dans le Var"
-          className="w-full md:h-[50vh] xl:h-[70vh] md:max-h-[800px] object-cover object-bottom 2xl:h-[85vh] 2xl:max-h-[1200px] 4xl:h-[96vh] 4xl:max-h-[1600px] pointer-events-none"
+          className="w-full md:h-[40vh] xl:h-[70vh] md:max-h-[800px] object-cover object-bottom 2xl:h-[85vh] 2xl:max-h-[1400px] 4xl:h-[96vh] 4xl:max-h-[1600px] pointer-events-none"
         />
 
 
@@ -102,7 +102,7 @@ export default function HomePage() {
               <img
                 src="/location.webp"
                 alt="Diagnostics pour louer un appartement ou une maison"
-                className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300 object-top"
               />
               <div className="p-4">
                 <h3 className="font-bold text-lg mb-2 group-hover:text-teal-700 transition-colors">

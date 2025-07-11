@@ -42,16 +42,13 @@ export default function Header() {
 
         {/* Desktop Nav */}
         <nav className="hidden xl-sm:flex gap-6 items-center relative">
-          {navLinks.map((link) => (
-            <Link
-              key={link.name}
-              to={link.href}
-              className="text-sm text-gray-700 hover:text-sidiag-medium transition"
-            >
-              {link.name}
-            </Link>
-          ))}
-
+          <Link
+            to="/#accueil"
+            className="text-sm text-gray-700 hover:text-sidiag-medium transition"
+          >
+            Accueil
+          </Link>
+          
           {/* Vente dropdown */}
           <div className="relative group">
             <button
@@ -95,7 +92,18 @@ export default function Header() {
               ))}
             </ul>
           </div>
-
+          <Link
+            to="/#about"
+            className="text-sm text-gray-700 hover:text-sidiag-medium transition"
+          >
+            Qui sommes-nous ?
+          </Link>
+          <Link
+            to="/contact"
+            className="text-sm text-gray-700 hover:text-sidiag-medium transition"
+          >
+            Contact
+          </Link>
           <Link
             to="/#devis"
             className="bg-sidiag-dark text-white px-4 py-2 rounded-lg text-sm hover:bg-sidiag-medium transition"
@@ -118,17 +126,13 @@ export default function Header() {
       {menuOpen && (
         <div className="xl-sm:hidden bg-white shadow-md border-t border-gray-100">
           <div className="flex flex-col p-4 gap-3">
-            {navLinks.map((link) => (
-              <Link
-                to={link.href}
-                className="text-sm text-gray-700 hover:text-sidiag-medium transition"
-                key={link.name}
-                onClick={() => setMenuOpen(false)}
-              >
-                {link.name}
-              </Link>
-            ))}
-
+            <Link 
+              to="/#accueil"
+              onClick={() => setMenuOpen(false)}
+              className="text-sm text-gray-700 hover:text-sidiag-medium transition"
+            >
+              Accueil
+            </Link>
             <div>
               <Link
                 to="/diagnostics-vente"
@@ -168,7 +172,20 @@ export default function Header() {
                 </Link>
               ))}
             </div>
-
+            <Link
+              to="/#about"
+              onClick={() => setMenuOpen(false)}
+              className="text-sm text-gray-700 hover:text-sidiag-medium transition"
+            >
+              Qui sommes-nous ?
+            </Link>
+            <Link
+              to="/contact"
+              onClick={() => setMenuOpen(false)}
+              className="text-sm text-gray-700 hover:text-sidiag-medium transition"
+            >
+              Contact
+            </Link>
             <Link
               to="/#devis"
               className="bg-sidiag-dark text-white text-center px-4 py-2 rounded-lg text-sm hover:bg-cyan-800 transition"
