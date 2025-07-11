@@ -13,8 +13,8 @@ export default function LegalNotices() {
           Téléphone : +33 6 68 85 25 78<br />
           E‑mail : sidiag.expertises@gmail.com<br />
           SIRET : 945 059 368 00015<br />
-          Certifié par l’organisme agréé : <br />
-          Assurance Responsabilité Civile Professionnelle : 
+          Certifié par l’organisme agréé : LCP<br />
+          Assurance Responsabilité Civile Professionnelle : Klarity CDIAGK002075
         </p>
 
         <p><strong>Hébergement :</strong><br />
