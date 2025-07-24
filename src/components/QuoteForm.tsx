@@ -40,7 +40,7 @@ export default function QuoteForm() {
         method="POST"
         className="space-y-6 bg-white/90 p-6 rounded-2xl shadow-lg transition-all duration-300 hover:shadow-2xl backdrop-blur"
       >
-        <input type="hidden" name="_next" value="http://localhost:5173/merci" />
+        <input type="hidden" name="_next" value="https://www.sidiag-expertises.com/merci" />
         <input type="text" name="_honey" style={{ display: "none" }} />
         <input type="hidden" name="_captcha" value="false" />
 
