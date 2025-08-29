@@ -21,7 +21,6 @@ export default function Footer() {
             </li>
             <li>SIRET : 945 059 368 00015</li>
             <li>Assurance RC Pro : Klarity CDIAGK002075</li>
-            <img src="/certification.webp" alt="certification LCP" className="w-[40%] bg-white p-1 rounded-md"/>
           </ul>
           
         </div>
